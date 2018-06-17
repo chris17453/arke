@@ -19,6 +19,7 @@ JSON.
 ### Maps:
 - Convert WebAPI JSON into parameters for scripts 
 
+
 ## Software design
 The point of arke is to allow diverse scripts to act in concert without the need 
 for building an API. The backend scripts can be API agnostic. Front end 
@@ -26,18 +27,16 @@ development can occur silmutaniosly with a working api that uses stubs.  Routes
 are easily created and destroyed. Route stubs can be scripted or static. This is 
 great for testing.
 
-## Routes are stored in a text file.
 
+## Configuration
+- configuration is text based
+- All Routes are stored in a text file.
 
-## Arke''s namesake
-## ARKE (Arce) was the messenger of the Titan-gods and sister of the 
+## Arke's namesake
+ARKE (Arce) was the messenger of the Titan-gods and sister of the 
 rainbow-goddess Iris. During the Titan War the two goddesses served on 
 opposite sides--Iris became the messenger of the Olympian Gods and Arke 
 assumed the role of messenger of the Titanes. 
-
-
-
-
 
 
 
