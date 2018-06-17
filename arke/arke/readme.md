@@ -1,4 +1,5 @@
-﻿# Arke is a configurable webAPI which uses dynamic routing for testing and execution.
+﻿# Arke is a configurable webAPI
+### arke uses dynamic routing for testing and execution.
 
 
 ## How does it do it
@@ -29,6 +30,7 @@ great for testing.
 
 
 ## Configuration
+ark was designed as a simple service. All configuration is done via text files.
 - configuration is text based
 - All Routes are stored in a text file.
 
