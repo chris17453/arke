@@ -11,7 +11,7 @@ namespace arke {
         /// <param name="type">Type.</param>
         /// <param name="script">Script.</param>
         /// <param name="args">Arguments.</param>
-	    public static string Run(string type,string script, string args) {
+		public static models.json_output Run(string type,string script, string args) {
             ProcessStartInfo start       = new ProcessStartInfo();
 			string engine = "";
 			switch(type) {
@@ -29,10 +29,14 @@ namespace arke {
             start.RedirectStandardOutput = true;
             start.RedirectStandardError  = true; 
             using (Process process = Process.Start(start)) {
+				process.WaitForExit();
                 using (StreamReader reader = process.StandardOutput) {
                     string stderr = process.StandardError.ReadToEnd(); 
-                    string result = reader.ReadToEnd(); 
-                    return result;
+                    string result = reader.ReadToEnd();
+					models.json_output output = new models.json_output();
+					output.output = result;
+					output.exit_code = process.ExitCode;
+					return output;
                 }
             }
         }//end function
